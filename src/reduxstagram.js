@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 // import styles
 import './sass/main.scss';
 
-// compoments
+// components
 import Main from './components/Main';
 import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
