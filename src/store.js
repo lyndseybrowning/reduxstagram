@@ -10,7 +10,7 @@ import comments from './data/comments';
 import posts from './data/posts';
 
 // create an object for the default data
-const defaultstate = {
+const defaultState = {
   posts,
   comments
 };
