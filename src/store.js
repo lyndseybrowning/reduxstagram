@@ -18,6 +18,10 @@ const defaultstate = {
 // create store
 const store = createStore(rootReducer, defaultState);
 
-// create history and store export
+// export history and store
+// history is a named export so can be called using
+// desctructuring assignment
 export const history = syncHistoryWithStore(browserHistory, store);
+// export the store as the default module
+// so can be called as default import
 export default store;
