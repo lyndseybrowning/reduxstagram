@@ -1,3 +1,3 @@
 # Reduxtagram
 
-Free course by Wesbos, [https://learnredux.com/](learnredux.com).
+Free course by Wes Bos, [https://learnredux.com/](learnredux.com).
