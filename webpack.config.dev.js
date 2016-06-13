@@ -28,7 +28,7 @@ module.exports = {
     {
       test: /\.styl$/,
       include: path.join(__dirname, 'src'),
-      loader: 'style-loader!css-loader!stylus-loader'
+      loader: 'style-loader!css-loader!sass-loader'
     }
     ]
   }
