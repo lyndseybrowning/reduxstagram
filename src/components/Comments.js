@@ -2,12 +2,16 @@ import React from 'react';
 
 const Comments = React.createClass({
   renderComments(comment, index) {
+
+    // find the current post id in the querystring
+    let { postId } = this.props.params;
+
     return (
       <div className="comment" key={index}>
         <p>
           <strong>{comment.user}</strong>
           {comment.text}
-          <button className='remove-comment'>&times;</button>
+          <button className='remove-comment' onClick={this.handleDelete.bind(null, postId, index)}>&times;</button>
         </p>
       </div>
     );
@@ -22,6 +26,11 @@ const Comments = React.createClass({
 
     this.props.addComment(postId, author, comment);
     this.refs.commentForm.reset();
+  },
+
+  handleDelete(postId, index) {
+    // index = the comment index inside comments[postId] that we want to remove
+    this.props.removeComment(postId, index);
   },
 
   render() {
