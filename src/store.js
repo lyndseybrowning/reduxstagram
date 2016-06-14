@@ -22,6 +22,16 @@ const store = createStore(rootReducer, defaultState);
 // history is a named export so can be called using
 // desctructuring assignment
 export const history = syncHistoryWithStore(browserHistory, store);
+
+
+// allows us to hot reload reducers
+if(module.hot) {
+  module.hot.accept('./reducers', () => {
+    const nextRootReducer = require('./reducers/index').default;
+    store.replaceReducer(nextRootReducer);
+  });
+}
+
 // export the store as the default module
 // so can be called as default import
 export default store;
