@@ -1,5 +1,6 @@
 @import 'base/normalise';
 @import 'base/typography';
+@import 'base/animations';
 
 body {
   background: offwhite;
@@ -127,7 +128,7 @@ body {
 }
 
 button, .button {
-  border: 2px solid lighten(grey, 90%);
+  border: 2px solid #eee;
   background: none;
   flex-basis: 48%;
   display: inline-block;
