@@ -15,8 +15,13 @@ const defaultState = {
   comments
 };
 
+// enhance our store for redux dev tools
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
 // create store
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState, enhancers);
 
 // export history and store
 // history is a named export so can be called using
